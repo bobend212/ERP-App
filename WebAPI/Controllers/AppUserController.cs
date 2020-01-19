@@ -30,7 +30,6 @@ namespace WebAPI.Controllers
             {
                 UserName = model.UserName,
                 Email = model.Email,
-                PasswordHash = model.Password,
                 FullName = model.FullName
             };
 
