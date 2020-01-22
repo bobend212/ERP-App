@@ -33,5 +33,29 @@ namespace WebAPI.Controllers
                 user.UserName
             };
         }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        [Route("forAdmin")]
+        public string GetForAdmin()
+        {
+            return "Hello ADMIN";
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "User")]
+        [Route("forUser")]
+        public string GetForUser()
+        {
+            return "Hello normal USER";
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin, User")]
+        [Route("forAll")]
+        public string GetForAll()
+        {
+            return "Hello ALL";
+        }
     }
 }
