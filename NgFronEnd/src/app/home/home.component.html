@@ -13,12 +13,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Projects</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Employees</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/adminpanel">Admin Panel</a>
-            </li>
+            <div *ngIf="userDetails.role == 'Admin'">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Employees</a>
+                </li>
+            </div>
+            <div *ngIf="userDetails.role == 'Admin'">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/adminpanel">Admin Panel</a>
+                </li>
+            </div>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right: 5px;" href="#">My Account</a>
@@ -32,5 +36,6 @@
         <li class="list-group-item"> <strong>Username: </strong> {{userDetails.userName}}</li>
         <li class="list-group-item"> <strong>Email: </strong> {{userDetails.email}}</li>
         <li class="list-group-item"> <strong>Full Name: </strong> {{userDetails.fullName}}</li>
+        <li class="list-group-item"> <strong>Full Name: </strong> {{userDetails.role}}</li>
     </ul>
 </div>

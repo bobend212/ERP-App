@@ -30,7 +30,8 @@ namespace WebAPI.Controllers
             {
                 user.FullName,
                 user.Email,
-                user.UserName
+                user.UserName,
+                user.Role
             };
         }
 

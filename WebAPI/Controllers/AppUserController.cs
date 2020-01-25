@@ -39,7 +39,8 @@ namespace WebAPI.Controllers
             {
                 UserName = model.UserName,
                 Email = model.Email,
-                FullName = model.FullName
+                FullName = model.FullName,
+                Role = model.Role
             };
 
             try
